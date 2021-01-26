@@ -42,10 +42,9 @@ const broadcast = (priceCurrent) => {
   const prices = priceCurrent.split('|');
   return axios({
     method: 'post',
-    url: `${LINE_MESSAGING_API}/message/push`,
+    url: `${LINE_MESSAGING_API}/message/broadcast`,
     headers: LINE_HEADER,
     data: JSON.stringify({
-      to: "U3c28a70ed7c5e7ce2c9a75976328c426",
       messages: [{
         "type": "flex",
         "altText": "Flex Message",
